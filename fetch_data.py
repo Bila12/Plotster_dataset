@@ -8,7 +8,7 @@ movie_dat = pd.DataFrame( columns=['id', 'title', 'genre','Plot', 'rating', 'vot
 count = 0
 text_file = “list_clear_id_train”
 with open(text_file, "rb") as fp:
-            file_id = pickle.load(fp)
+    file_id = pickle.load(fp)
 for i in file_id:
     try:
         movie = tmdb.Movies(i)
