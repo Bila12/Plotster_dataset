@@ -6,7 +6,7 @@ import pandas as pd
 import datetime
 movie_dat = pd.DataFrame( columns=['id', 'title', 'genre','Plot', 'rating', 'vote_count', 'release_date'])
 count = 0
-text_file = ìlist_clear_id_trainî
+text_file = ‚Äúlist_clear_id_train‚Äù
 with open(text_file, "rb") as fp:
             file_id = pickle.load(fp)
 for i in file_id:
@@ -16,7 +16,7 @@ for i in file_id:
         ppath = movie.poster_path
     
         path = image_path + ppath
-        image_name = './posters_AC/poster_AC_' + str(i) + '.jpg'
+        image_name = './posters/poster_' + str(i) + '.jpg'
         genre = movie.genres
         title = movie.title.replace('\n', ' ')
         plot = movie.overview.replace('\n', ' ')
