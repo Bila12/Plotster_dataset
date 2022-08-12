@@ -25,7 +25,6 @@ for i in file_id:
         vote_count = movie.vote_count
         date = movie.release_date
         
-        print(date)
         movie_dat.loc[count] = [idm, title, genre, plot, rating, vote_count, date]
         img_data = requests.get(path).content
         with open(image_name, 'wb') as handler:
@@ -34,4 +33,4 @@ for i in file_id:
     except:
         continue
         
-movie_dat.to_csv('./posters_AC/movie_data_rating_after_CLIP', encoding='utf-8', index=False)
+movie_dat.to_csv('./posters/movie_data', encoding='utf-8', index=False)
