@@ -9,7 +9,8 @@ count = 0
 text_file = “list_clear_id_train”
 with open(text_file, "rb") as fp:
     file_id = pickle.load(fp)
-for i in file_id:
+list_id = [file_id[x] for x in range(len(file_id))]
+for i in list_id:
     try:
         movie = tmdb.Movies(i)
         response = movie.info()
